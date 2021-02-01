@@ -27,7 +27,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = ['localhost', 'estacionamentospec.herokuapp.com' ]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'estacionamentospec.herokuapp.com' ]
 
 
 # Application definition
@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'bootstrapform',
     'core',
+    'website',
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
