@@ -19,13 +19,26 @@
         </form>  
     </div>  
     <div class="col-sm-6">
-        <ul>
-        {% for veiculo in veiculos %}
-            <li> 
-                <a href="{% url 'core_veiculo_update' veiculo.id %}"> {{ veiculo.placa }} </a>
-            </li>
-        {% endfor %}
-        </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Marca</th>
+                    <th scope="col">Placa</th>
+                    <th scope="col">Proprietario</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for veiculo in veiculos %}
+                <tr>
+                    <th scope="row">{{ veiculo.id }}</th>
+                    <td>{{ veiculo.marca }}</td>
+                    <td>{{ veiculo.placa }}</td>
+                    <td>{{ veiculo.proprietario }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 

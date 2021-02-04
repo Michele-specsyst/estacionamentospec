@@ -1,5 +1,66 @@
 {% extends 'website/base.html' %}
+{% load static %}
 
 {% block main %}
-    <h1>Seja Bem Vindo ao Website</h1>
+    <div class="row">
+        <div class="col-6">
+            <h1>Estacionamento 24 horas</h1>
+            <span>Slogan da sua empresa aqui</span>
+        </div>
+        <div class="col-6">
+            <img src="{% static 'img/car.jpg' %}" alt="Estacionamento 24 horas">
+        </div>
+    </div>
+    <br>
+    {% include 'website/menu.html' %}
+    <br>
+    <div class="row">
+        <div class="col-6">
+            Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. 
+            Paisis, filhis, espiritis santis. 
+            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
+            Sed non consequat odio. A ordem dos tratores não altera o pão duris.
+        </div>
+        <div class="col-6">
+            Aenean aliquam molestie leo, vitae iaculis nisl. 
+            Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
+            Quem manda na minha terra sou euzis!
+            Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-4">
+            Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. 
+            Paisis, filhis, espiritis santis. 
+            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
+            Sed non consequat odio. A ordem dos tratores não altera o pão duris.
+        </div>
+        <div class="col-4">
+            <img src="{% static 'img/car.jpg' %}" alt="Estacionamento 24 horas">
+        </div>
+        <div class="col-4">
+            Aenean aliquam molestie leo, vitae iaculis nisl. 
+            Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
+            Quem manda na minha terra sou euzis!
+            Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. 
+            Paisis, filhis, espiritis santis. 
+            Nullam volutpat risus nec leo commodo, ut interdum diam laoreet.
+            Sed non consequat odio. A ordem dos tratores não altera o pão duris.
+        </div>
+        <div class="col-6">
+            Aenean aliquam molestie leo, vitae iaculis nisl. 
+            Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. 
+            Quem manda na minha terra sou euzis!
+            Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose.
+        </div>
+    </div>
+    <br>
+    {% include 'website/footer.html' %}
 {% endblock %}

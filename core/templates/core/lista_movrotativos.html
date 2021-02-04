@@ -20,15 +20,26 @@
         </form>
     </div>
     <div class="col-sm-6">
-        <ul>
-        {% for mov in mov_rot %}
-            <li> 
-                <a href="{% url 'core_movrotativos_update' mov.id %}"> 
-                    {{ mov.checkin }} - {{ mov.veiculo.placa }} 
-                </a>   
-            </li>
-        {% endfor %}
-        </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Veiculo</th>
+                    <th scope="col">Checkout</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mov_rotativo in mov_rot %}
+                <tr>
+                    <th scope="row">{{ mov_rotativo.id }}</th>
+                    <td>{{ mov_rotativo.veiculo }}</td>
+                    <td>{{ mov_rotativo.checkout }}</td>
+                    <td>{{ mov_rotativo.valor_hora }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 

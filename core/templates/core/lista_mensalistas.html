@@ -20,15 +20,26 @@
         </form>
     </div>
     <div class="col-sm-6">
-        <ul>
-        {% for mensalista in mensalistas %}
-            <li> 
-                <a href="{% url 'core_mensalista_update' mensalista.id %}"> 
-                    {{ mensalista.veiculo }} - {{ mensalista.inicio }} 
-                </a>   
-            </li>
-        {% endfor %}
-        </ul>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Veiculo</th>
+                    <th scope="col">Inicio</th>
+                    <th scope="col">Valor</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for mensalista in mensalistas %}
+                <tr>
+                    <th scope="row">{{ mensalista.id }}</th>
+                    <td>{{ mensalista.veiculo }}</td>
+                    <td>{{ mensalista.inicio }}</td>
+                    <td>{{ mensalista.valor_mes }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </div>
 </div>
 
