@@ -1,0 +1,68 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block main %}
+    <div class="row">
+        <p> {{ mensagem }} </p>
+        <div class="col-6">
+        <br>
+            <form method="POST">
+                {% csrf_token %}
+                <div class="form-group col-md-12">
+                    <label for="inputEmail4" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="inputEmail4" name="email">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-6">
+                        <label for="inputNome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="inputNome" placeholder="Seu nome aqui" name="nome">
+                    </div>
+                    <div class="form-group col-6">
+                        <label for="inputSobrenome" class="form-label">Sobrenome</label>
+                        <input type="text" class="form-control" id="inputSobrenome" placeholder="Seu sobrenome aqui" name="sobrenome">
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <label for="inputEndereco" class="form-label">Endereco</label>
+                    <input type="text" class="form-control" id="inputEndereco" placeholder="Apartment, studio, or floor" name="endereco">
+                </div>  
+                <div class="form-group">
+                    <textarea name="mensagem" cols="75" rows="10" class="form-control"></textarea>
+                </div>           
+                <div class="form-group col-12">
+                    <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck" name="receber-noticias">
+                    <label class="form-check-label" for="gridCheck">
+                        Receber noticias
+                    </label>
+                    </div>
+                </div>
+                <div class="form-group col-12">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-6">
+            <br>
+            <p>
+            Mussum Ipsum, cacilds vidis litro abertis. 
+            In elementis mé pra quem é amistosis quis leo. 
+            Viva Forevis aptent taciti sociosqu ad litora torquent. 
+            Aenean aliquam molestie leo, vitae iaculis nisl. 
+            Mé faiz elementum girarzis, nisi eros vermeio.
+            Cevadis im ampola pa arma uma pindureta. 
+            Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. 
+            Praesent malesuada urna nisi, quis volutpat erat hendrerit non. 
+            Nam vulputate dapibus. Detraxit consequat et quo num tendi nada.
+            </p>
+            <br>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3659.3693329793614!2d-46.
+                56430798554521!3d-23.483202964594582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94
+                cef587a86d2cb5%3A0x24f39038cc660a0!2sRua%20Dr.%20Ant%C3%B4nio%20Mazzilli%20Filho%2C%20383%20
+                -%20Parque%20Edu%20Chaves%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2002230-070!5e0!3m2!1spt-BR!2sbr!
+                4v1612445627478!5m2!1spt-BR!2sbr" width="600" height="450" frameborder="0" 
+                style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            </iframe>
+        </div>        
+    </div>
+{% endblock %}
